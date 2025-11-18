@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snowman Dress Up</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="stylesheet" href="snowman.css">
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body>
+  <div class="container"><!-- Background scenes -->
+   <div id="frozen-lake" class="scene frozen-lake">
+    <svg width="100%" height="100%" preserveaspectratio="xMidYMid slice" viewbox="0 0 1200 800"><defs>
+      <lineargradient id="skyGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+       <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+       <stop offset="100%" style="stop-color:#E0F6FF;stop-opacity:1" />
+      </lineargradient>
+     </defs> <rect width="1200" height="800" fill="url(#skyGrad1)" /> <!-- Mountains in background --> <path d="M 0 400 L 200 250 L 400 400 Z" fill="#B0C4DE" opacity="0.6" /> <path d="M 300 400 L 500 200 L 700 400 Z" fill="#B0C4DE" opacity="0.6" /> <path d="M 600 400 L 850 220 L 1100 400 Z" fill="#B0C4DE" opacity="0.6" /> <!-- Frozen lake --> <ellipse cx="600" cy="650" rx="500" ry="120" fill="#B0E0E6" opacity="0.7" /> <ellipse cx="600" cy="650" rx="450" ry="100" fill="#E0F6FF" opacity="0.5" /> <!-- Snow on ground --> <path d="M 0 500 Q 300 480 600 500 Q 900 520 1200 500 L 1200 800 L 0 800 Z" fill="#FFFFFF" /> <!-- Snowflakes --> <circle cx="150" cy="100" r="3" fill="#FFFFFF" opacity="0.8" /> <circle cx="300" cy="180" r="2" fill="#FFFFFF" opacity="0.8" /> <circle cx="500" cy="120" r="3" fill="#FFFFFF" opacity="0.8" /> <circle cx="700" cy="90" r="2" fill="#FFFFFF" opacity="0.8" /> <circle cx="900" cy="150" r="3" fill="#FFFFFF" opacity="0.8" /> <circle cx="1050" cy="110" r="2" fill="#FFFFFF" opacity="0.8" />
+    </svg>
+   </div>
+   <div id="log-cabin" class="scene log-cabin" style="opacity: 0;">
+    <svg width="100%" height="100%" preserveaspectratio="xMidYMid slice" viewbox="0 0 1200 800"><defs>
+      <lineargradient id="skyGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+       <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:1" />
+       <stop offset="100%" style="stop-color:#87CEEB;stop-opacity:1" />
+      </lineargradient>
+     </defs> <rect width="1200" height="800" fill="url(#skyGrad2)" /> <!-- Snow ground --> <path d="M 0 550 Q 300 530 600 550 Q 900 570 1200 550 L 1200 800 L 0 800 Z" fill="#FFFFFF" /> <!-- Log cabin --> <rect x="800" y="400" width="280" height="200" fill="#8B4513" /> <rect x="810" y="410" width="260" height="15" fill="#654321" /> <rect x="810" y="435" width="260" height="15" fill="#654321" /> <rect x="810" y="460" width="260" height="15" fill="#654321" /> <rect x="810" y="485" width="260" height="15" fill="#654321" /> <rect x="810" y="510" width="260" height="15" fill="#654321" /> <rect x="810" y="535" width="260" height="15" fill="#654321" /> <rect x="810" y="560" width="260" height="15" fill="#654321" /> <rect x="810" y="585" width="260" height="15" fill="#654321" /> <!-- Roof --> <path d="M 780 400 L 940 320 L 1100 400 Z" fill="#8B0000" /> <path d="M 780 400 L 940 320 L 1100 400 L 1080 410 L 940 340 L 800 410 Z" fill="#A52A2A" /> <!-- Snow on roof --> <path d="M 800 410 Q 870 395 940 340 Q 1010 395 1080 410 L 1070 415 Q 1010 400 940 345 Q 870 400 810 415 Z" fill="#FFFFFF" /> <!-- Door --> <rect x="920" y="520" width="60" height="80" rx="5" fill="#654321" /> <circle cx="965" cy="560" r="3" fill="#FFD700" /> <!-- Window --> <rect x="850" y="470" width="50" height="50" rx="3" fill="#87CEEB" /> <line x1="875" y1="470" x2="875" y2="520" stroke="#654321" stroke-width="3" /> <line x1="850" y1="495" x2="900" y2="495" stroke="#654321" stroke-width="3" /> <!-- Pine trees --> <path d="M 200 500 L 250 400 L 300 500 Z" fill="#228B22" /> <path d="M 200 480 L 250 380 L 300 480 Z" fill="#228B22" /> <path d="M 200 460 L 250 360 L 300 460 Z" fill="#228B22" /> <rect x="240" y="500" width="20" height="50" fill="#8B4513" /> <path d="M 400 520 L 450 420 L 500 520 Z" fill="#2F4F2F" /> <path d="M 400 500 L 450 400 L 500 500 Z" fill="#2F4F2F" /> <rect x="440" y="520" width="20" height="50" fill="#8B4513" />
+    </svg>
+   </div>
+   <div id="pine-forest" class="scene pine-forest" style="opacity: 0;">
+    <svg width="100%" height="100%" preserveaspectratio="xMidYMid slice" viewbox="0 0 1200 800"><defs>
+      <lineargradient id="skyGrad3" x1="0%" y1="0%" x2="0%" y2="100%">
+       <stop offset="0%" style="stop-color:#2C5F7C;stop-opacity:1" />
+       <stop offset="100%" style="stop-color:#5A9FB5;stop-opacity:1" />
+      </lineargradient>
+     </defs> <rect width="1200" height="800" fill="url(#skyGrad3)" /> <!-- Snow ground --> <path d="M 0 500 Q 300 480 600 500 Q 900 520 1200 500 L 1200 800 L 0 800 Z" fill="#FFFFFF" /> <!-- Back row of trees --> <path d="M 100 450 L 150 350 L 200 450 Z" fill="#1C4D3F" opacity="0.7" /> <path d="M 100 430 L 150 330 L 200 430 Z" fill="#1C4D3F" opacity="0.7" /> <path d="M 350 470 L 400 370 L 450 470 Z" fill="#1C4D3F" opacity="0.7" /> <path d="M 350 450 L 400 350 L 450 450 Z" fill="#1C4D3F" opacity="0.7" /> <path d="M 600 460 L 650 360 L 700 460 Z" fill="#1C4D3F" opacity="0.7" /> <path d="M 600 440 L 650 340 L 700 440 Z" fill="#1C4D3F" opacity="0.7" /> <path d="M 850 450 L 900 350 L 950 450 Z" fill="#1C4D3F" opacity="0.7" /> <path d="M 850 430 L 900 330 L 950 430 Z" fill="#1C4D3F" opacity="0.7" /> <path d="M 1050 470 L 1100 370 L 1150 470 Z" fill="#1C4D3F" opacity="0.7" /> <path d="M 1050 450 L 1100 350 L 1150 450 Z" fill="#1C4D3F" opacity="0.7" /> <!-- Front row of trees --> <path d="M 50 550 L 120 420 L 190 550 Z" fill="#228B22" /> <path d="M 50 520 L 120 390 L 190 520 Z" fill="#228B22" /> <path d="M 50 490 L 120 360 L 190 490 Z" fill="#228B22" /> <rect x="105" y="550" width="30" height="70" fill="#8B4513" /> <path d="M 900 560 L 970 430 L 1040 560 Z" fill="#2F4F2F" /> <path d="M 900 530 L 970 400 L 1040 530 Z" fill="#2F4F2F" /> <path d="M 900 500 L 970 370 L 1040 500 Z" fill="#2F4F2F" /> <rect x="955" y="560" width="30" height="70" fill="#8B4513" /> <!-- Snow on trees --> <ellipse cx="120" cy="490" rx="70" ry="15" fill="#FFFFFF" opacity="0.8" /> <ellipse cx="970" cy="500" rx="70" ry="15" fill="#FFFFFF" opacity="0.8" />
+    </svg>
+   </div>
+   <div id="sunny-beach" class="scene sunny-beach" style="opacity: 0;">
+    <svg width="100%" height="100%" preserveaspectratio="xMidYMid slice" viewbox="0 0 1200 800"><defs>
+      <lineargradient id="skyGrad4" x1="0%" y1="0%" x2="0%" y2="100%">
+       <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+       <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
+      </lineargradient>
+     </defs> <rect width="1200" height="800" fill="url(#skyGrad4)" /> <!-- Sun --> <circle cx="1000" cy="150" r="80" fill="#FFD700" opacity="0.9" /> <circle cx="1000" cy="150" r="70" fill="#FFA500" opacity="0.7" /> <!-- Ocean --> <path d="M 0 450 Q 300 430 600 450 Q 900 470 1200 450 L 1200 800 L 0 800 Z" fill="#4682B4" /> <path d="M 0 480 Q 300 460 600 480 Q 900 500 1200 480 L 1200 800 L 0 800 Z" fill="#5F9EA0" opacity="0.7" /> <!-- Beach sand --> <path d="M 0 550 Q 300 530 600 550 Q 900 570 1200 550 L 1200 800 L 0 800 Z" fill="#F4A460" /> <path d="M 0 600 L 1200 600 L 1200 800 L 0 800 Z" fill="#DEB887" /> <!-- Palm tree --> <rect x="180" y="450" width="25" height="200" fill="#8B4513" rx="5" /> <line x1="185" y1="480" x2="185" y2="640" stroke="#654321" stroke-width="3" /> <line x1="200" y1="490" x2="200" y2="640" stroke="#654321" stroke-width="3" /> <!-- Palm leaves --> <ellipse cx="192" cy="430" rx="80" ry="25" fill="#228B22" transform="rotate(-30 192 430)" /> <ellipse cx="192" cy="430" rx="80" ry="25" fill="#228B22" transform="rotate(30 192 430)" /> <ellipse cx="192" cy="430" rx="80" ry="25" fill="#228B22" transform="rotate(-60 192 430)" /> <ellipse cx="192" cy="430" rx="80" ry="25" fill="#228B22" transform="rotate(60 192 430)" /> <ellipse cx="192" cy="430" rx="25" ry="80" fill="#32CD32" /> <!-- Beach umbrella --> <line x1="950" y1="550" x2="950" y2="650" stroke="#8B4513" stroke-width="8" /> <path d="M 850 550 Q 900 520 950 540 Q 1000 520 1050 550 Z" fill="#FF6347" /> <path d="M 870 545 L 880 535 L 890 545 Z" fill="#FFFFFF" /> <path d="M 920 540 L 930 530 L 940 540 Z" fill="#FFFFFF" /> <path d="M 960 540 L 970 530 L 980 540 Z" fill="#FFFFFF" /> <path d="M 1010 545 L 1020 535 L 1030 545 Z" fill="#FFFFFF" />
+    </svg>
+   </div>
+   <div id="starry-night" class="scene starry-night" style="opacity: 0;">
+    <svg width="100%" height="100%" preserveaspectratio="xMidYMid slice" viewbox="0 0 1200 800"><defs>
+      <lineargradient id="skyGrad5" x1="0%" y1="0%" x2="0%" y2="100%">
+       <stop offset="0%" style="stop-color:#000428;stop-opacity:1" />
+       <stop offset="100%" style="stop-color:#004e92;stop-opacity:1" />
+      </lineargradient>
+      <radialgradient id="moonGlow">
+       <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.8" />
+       <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0" />
+      </radialgradient>
+     </defs> <rect width="1200" height="800" fill="url(#skyGrad5)" /> <!-- Moon --> <circle cx="200" cy="150" r="60" fill="#F0E68C" /> <circle cx="220" cy="140" r="50" fill="#000428" opacity="0.3" /> <circle cx="200" cy="150" r="80" fill="url(#moonGlow)" opacity="0.3" /> <!-- Stars --> <circle cx="400" cy="100" r="2" fill="#FFFFFF" /> <circle cx="550" cy="80" r="3" fill="#FFFFFF" /> <circle cx="700" cy="120" r="2" fill="#FFFFFF" /> <circle cx="850" cy="90" r="2" fill="#FFFFFF" /> <circle cx="1000" cy="110" r="3" fill="#FFFFFF" /> <circle cx="300" cy="200" r="2" fill="#FFFFFF" /> <circle cx="500" cy="180" r="2" fill="#FFFFFF" /> <circle cx="650" cy="220" r="3" fill="#FFFFFF" /> <circle cx="900" cy="200" r="2" fill="#FFFFFF" /> <circle cx="1100" cy="180" r="2" fill="#FFFFFF" /> <circle cx="450" cy="300" r="2" fill="#FFFFFF" /> <circle cx="800" cy="320" r="2" fill="#FFFFFF" /> <!-- Star twinkles --> <path d="M 550 80 L 552 75 L 554 80 L 559 82 L 554 84 L 552 89 L 550 84 L 545 82 Z" fill="#FFFFFF" opacity="0.8" /> <path d="M 1000 110 L 1002 105 L 1004 110 L 1009 112 L 1004 114 L 1002 119 L 1000 114 L 995 112 Z" fill="#FFFFFF" opacity="0.8" /> <path d="M 650 220 L 652 215 L 654 220 L 659 222 L 654 224 L 652 229 L 650 224 L 645 222 Z" fill="#FFFFFF" opacity="0.8" /> <!-- Snowy ground --> <path d="M 0 550 Q 300 530 600 550 Q 900 570 1200 550 L 1200 800 L 0 800 Z" fill="#E8F4F8" /> <ellipse cx="300" cy="600" rx="150" ry="30" fill="#FFFFFF" opacity="0.5" /> <ellipse cx="800" cy="620" rx="200" ry="40" fill="#FFFFFF" opacity="0.5" /> <!-- Distant trees silhouette --> <path d="M 100 520 L 130 450 L 160 520 Z" fill="#001F3F" opacity="0.6" /> <path d="M 900 530 L 930 460 L 960 530 Z" fill="#001F3F" opacity="0.6" /> <path d="M 1050 540 L 1080 470 L 1110 540 Z" fill="#001F3F" opacity="0.6" />
+    </svg>
+   </div>
+   <div id="school" class="scene school" style="opacity: 0;">
+    <svg width="100%" height="100%" preserveaspectratio="xMidYMid slice" viewbox="0 0 1200 800"><defs>
+      <lineargradient id="skyGrad6" x1="0%" y1="0%" x2="0%" y2="100%">
+       <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+       <stop offset="100%" style="stop-color:#B0E0E6;stop-opacity:1" />
+      </lineargradient>
+     </defs> <rect width="1200" height="800" fill="url(#skyGrad6)" /> <!-- Snowy ground --> <path d="M 0 550 Q 300 530 600 550 Q 900 570 1200 550 L 1200 800 L 0 800 Z" fill="#FFFFFF" /> <!-- School building --> <rect x="700" y="350" width="400" height="250" fill="#CD5C5C" /> <!-- Brick pattern --> <line x1="710" y1="370" x2="1090" y2="370" stroke="#8B0000" stroke-width="2" opacity="0.5" /> <line x1="710" y1="400" x2="1090" y2="400" stroke="#8B0000" stroke-width="2" opacity="0.5" /> <line x1="710" y1="430" x2="1090" y2="430" stroke="#8B0000" stroke-width="2" opacity="0.5" /> <line x1="710" y1="460" x2="1090" y2="460" stroke="#8B0000" stroke-width="2" opacity="0.5" /> <line x1="710" y1="490" x2="1090" y2="490" stroke="#8B0000" stroke-width="2" opacity="0.5" /> <line x1="710" y1="520" x2="1090" y2="520" stroke="#8B0000" stroke-width="2" opacity="0.5" /> <!-- Roof --> <path d="M 680 350 L 900 250 L 1120 350 Z" fill="#8B4513" /> <path d="M 680 350 L 900 250 L 1120 350 L 1100 360 L 900 270 L 700 360 Z" fill="#A0522D" /> <!-- Snow on roof --> <path d="M 700 360 Q 800 300 900 270 Q 1000 300 1100 360 L 1090 365 Q 1000 310 900 280 Q 800 310 710 365 Z" fill="#FFFFFF" /> <!-- Bell tower --> <rect x="870" y="200" width="60" height="50" fill="#CD5C5C" /> <path d="M 860 200 L 900 170 L 940 200 Z" fill="#8B4513" /> <circle cx="900" cy="220" r="8" fill="#FFD700" /> <!-- Door --> <rect x="875" y="520" width="50" height="80" rx="25" ry="0" fill="#654321" /> <circle cx="915" cy="560" r="4" fill="#FFD700" /> <!-- Windows --> <rect x="750" y="400" width="60" height="60" rx="3" fill="#87CEEB" /> <line x1="780" y1="400" x2="780" y2="460" stroke="#654321" stroke-width="4" /> <line x1="750" y1="430" x2="810" y2="430" stroke="#654321" stroke-width="4" /> <rect x="840" y="400" width="60" height="60" rx="3" fill="#87CEEB" /> <line x1="870" y1="400" x2="870" y2="460" stroke="#654321" stroke-width="4" /> <line x1="840" y1="430" x2="900" y2="430" stroke="#654321" stroke-width="4" /> <rect x="940" y="400" width="60" height="60" rx="3" fill="#87CEEB" /> <line x1="970" y1="400" x2="970" y2="460" stroke="#654321" stroke-width="4" /> <line x1="940" y1="430" x2="1000" y2="430" stroke="#654321" stroke-width="4" /> <rect x="1020" y="400" width="60" height="60" rx="3" fill="#87CEEB" /> <line x1="1050" y1="400" x2="1050" y2="460" stroke="#654321" stroke-width="4" /> <line x1="1020" y1="430" x2="1080" y2="430" stroke="#654321" stroke-width="4" /> <!-- Flag pole --> <line x1="1120" y1="350" x2="1120" y2="250" stroke="#696969" stroke-width="4" /> <rect x="1120" y="260" width="50" height="30" fill="#DC143C" /> <rect x="1120" y="267" width="50" height="4" fill="#FFFFFF" /> <rect x="1120" y="279" width="50" height="4" fill="#FFFFFF" /> <!-- Playground equipment - swing set --> <line x1="200" y1="500" x2="200" y2="600" stroke="#8B4513" stroke-width="8" /> <line x1="350" y1="500" x2="350" y2="600" stroke="#8B4513" stroke-width="8" /> <line x1="190" y1="500" x2="360" y2="500" stroke="#8B4513" stroke-width="8" /> <line x1="230" y1="500" x2="230" y2="570" stroke="#654321" stroke-width="3" /> <rect x="220" y="570" width="20" height="15" fill="#4169E1" /> <line x1="300" y1="500" x2="300" y2="570" stroke="#654321" stroke-width="3" /> <rect x="290" y="570" width="20" height="15" fill="#FF6347" /> <!-- Snowman friends in background --> <circle cx="500" cy="540" r="25" fill="#FFFFFF" opacity="0.8" /> <circle cx="500" cy="490" r="20" fill="#FFFFFF" opacity="0.8" /> <circle cx="500" cy="450" r="18" fill="#FFFFFF" opacity="0.8" />
+    </svg>
+   </div><!-- Main content -->
+   <div class="main-content"><button class="download-btn" id="download-btn" aria-label="Download snowman image"> <span>📥</span> <span>Download Image</span> </button>
+    <h1 class="title" id="activity-title">Dress Up Your Snowman!</h1>
+    <p class="instructions" id="instruction-text">Click on items to dress your snowman</p><button class="speaker-btn" id="speaker-btn" aria-label="Read instructions aloud">🔊</button>
+    <div class="snowman-container"><!-- Snowman base body -->
+     <svg class="snowman-base" width="400" height="500" viewbox="0 0 400 500"><!-- Bottom snowball --> <circle cx="200" cy="420" r="80" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="2" /> <!-- Middle snowball --> <circle cx="200" cy="300" r="65" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="2" /> <!-- Top snowball (head) --> <circle cx="200" cy="180" r="55" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="2" />
+     </svg><!-- Facial expressions -->
+     <svg id="face-happy" class="snowman-item" width="100" height="60" viewbox="0 0 100 60" style="top: 155px; left: 150px; display: block;"><circle cx="30" cy="18" r="5" fill="#000000" /> <circle cx="70" cy="18" r="5" fill="#000000" /> <path d="M 25 38 Q 50 50 75 38" stroke="#000000" stroke-width="4" fill="none" stroke-linecap="round" />
+     </svg>
+     <svg id="face-excited" class="snowman-item" width="100" height="60" viewbox="0 0 100 60" style="top: 155px; left: 150px; display: none;"><circle cx="30" cy="18" r="6" fill="#000000" /> <circle cx="70" cy="18" r="6" fill="#000000" /> <circle cx="50" cy="40" r="10" fill="#000000" />
+     </svg>
+     <svg id="face-surprised" class="snowman-item" width="100" height="60" viewbox="0 0 100 60" style="top: 155px; left: 150px; display: none;"><circle cx="30" cy="18" r="6" fill="#000000" /> <circle cx="70" cy="18" r="6" fill="#000000" /> <ellipse cx="50" cy="40" rx="8" ry="12" fill="#000000" />
+     </svg>
+     <svg id="face-silly" class="snowman-item" width="100" height="60" viewbox="0 0 100 60" style="top: 155px; left: 150px; display: none;"><circle cx="30" cy="18" r="5" fill="#000000" /> <line x1="63" y1="15" x2="77" y2="21" stroke="#000000" stroke-width="4" stroke-linecap="round" /> <path d="M 30 38 Q 42 44 54 38 Q 60 42 66 38" stroke="#000000" stroke-width="4" fill="none" stroke-linecap="round" />
+     </svg>
+     <svg id="face-calm" class="snowman-item" width="100" height="60" viewbox="0 0 100 60" style="top: 155px; left: 150px; display: none;"><circle cx="30" cy="18" r="4" fill="#000000" /> <circle cx="70" cy="18" r="4" fill="#000000" /> <line x1="35" y1="40" x2="65" y2="40" stroke="#000000" stroke-width="4" stroke-linecap="round" />
+     </svg>
+     <svg id="face-sad" class="snowman-item" width="100" height="60" viewbox="0 0 100 60" style="top: 155px; left: 150px; display: none;"><circle cx="30" cy="18" r="5" fill="#000000" /> <circle cx="70" cy="18" r="5" fill="#000000" /> <path d="M 25 45 Q 50 35 75 45" stroke="#000000" stroke-width="4" fill="none" stroke-linecap="round" />
+     </svg><!-- Hats -->
+     <svg id="hat-top" class="snowman-item" width="130" height="100" viewbox="0 0 130 100" style="top: 85px; left: 135px; display: none;"><rect x="25" y="50" width="80" height="10" fill="#000000" /> <rect x="38" y="12" width="54" height="38" fill="#000000" /> <rect x="40" y="44" width="50" height="6" fill="#8B0000" />
+     </svg>
+     <svg id="hat-beanie" class="snowman-item" width="130" height="80" viewbox="0 0 130 80" style="top: 80px; left: 135px; display: none;"><ellipse cx="65" cy="52" rx="46" ry="20" fill="#FF6B6B" /> <ellipse cx="65" cy="33" rx="40" ry="26" fill="#FF6B6B" /> <circle cx="65" cy="13" r="10" fill="#FFD93D" />
+     </svg>
+     <svg id="hat-santa" class="snowman-item" width="130" height="90" viewbox="0 0 130 90" style="top: 70px; left: 135px; display: none;"><path d="M 30 58 Q 65 25 100 58" fill="#DC143C" /> <ellipse cx="65" cy="58" rx="40" ry="10" fill="#FFFFFF" /> <circle cx="95" cy="32" r="13" fill="#FFFFFF" />
+     </svg>
+     <svg id="hat-wizard" class="snowman-item" width="130" height="110" viewbox="0 0 130 110" style="top: 45px; left: 135px; display: none;"><path d="M 38 88 L 65 12 L 92 88 Z" fill="#4B0082" /> <ellipse cx="65" cy="88" rx="33" ry="10" fill="#4B0082" /> <path d="M 45 62 L 85 62" stroke="#FFD700" stroke-width="3" /> <circle cx="52" cy="44" r="4" fill="#FFD700" /> <circle cx="72" cy="50" r="4" fill="#FFD700" />
+     </svg>
+     <svg id="hat-cowboy" class="snowman-item" width="130" height="90" viewbox="0 0 130 90" style="top: 70px; left: 135px; display: none;"><ellipse cx="65" cy="70" rx="55" ry="12" fill="#8B4513" /> <path d="M 25 70 Q 35 40 65 35 Q 95 40 105 70" fill="#8B4513" /> <ellipse cx="65" cy="35" rx="25" ry="10" fill="#654321" />
+     </svg>
+     <svg id="hat-crown" class="snowman-item" width="130" height="80" viewbox="0 0 130 80" style="top: 80px; left: 135px; display: none;"><path d="M 25 60 L 30 30 L 45 45 L 65 25 L 85 45 L 100 30 L 105 60 Z" fill="#FFD700" /> <circle cx="30" cy="30" r="6" fill="#FF0000" /> <circle cx="65" cy="25" r="6" fill="#FF0000" /> <circle cx="100" cy="30" r="6" fill="#FF0000" /> <rect x="25" y="60" width="80" height="8" fill="#FFD700" />
+     </svg>
+     <svg id="hat-party" class="snowman-item" width="130" height="100" viewbox="0 0 130 100" style="top: 60px; left: 135px; display: none;"><path d="M 40 75 L 65 15 L 90 75 Z" fill="#FF1493" /> <circle cx="50" cy="55" r="4" fill="#FFD700" /> <circle cx="65" cy="40" r="4" fill="#00CED1" /> <circle cx="78" cy="60" r="4" fill="#FFD700" /> <ellipse cx="65" cy="75" rx="28" ry="8" fill="#FF1493" /> <circle cx="65" cy="12" r="8" fill="#FFD700" />
+     </svg>
+     <svg id="hat-chef" class="snowman-item" width="130" height="90" viewbox="0 0 130 90" style="top: 70px; left: 135px; display: none;"><ellipse cx="65" cy="65" rx="42" ry="12" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="2" /> <path d="M 30 65 Q 30 30 45 25 Q 50 15 65 15 Q 80 15 85 25 Q 100 30 100 65" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="2" />
+     </svg><!-- Scarves -->
+     <svg id="scarf-red" class="snowman-item" width="160" height="80" viewbox="0 0 160 80" style="top: 225px; left: 120px; display: none;"><ellipse cx="80" cy="25" rx="60" ry="16" fill="#DC143C" /> <rect x="115" y="20" width="20" height="50" fill="#DC143C" /> <rect x="117" y="65" width="5" height="10" fill="#DC143C" /> <rect x="125" y="65" width="5" height="10" fill="#DC143C" />
+     </svg>
+     <svg id="scarf-striped" class="snowman-item" width="160" height="80" viewbox="0 0 160 80" style="top: 225px; left: 120px; display: none;"><ellipse cx="80" cy="25" rx="60" ry="16" fill="#4169E1" /> <rect x="52" y="20" width="10" height="12" fill="#FFFFFF" /> <rect x="68" y="20" width="10" height="12" fill="#FFFFFF" /> <rect x="84" y="20" width="10" height="12" fill="#FFFFFF" /> <rect x="115" y="20" width="20" height="50" fill="#4169E1" /> <rect x="117" y="32" width="16" height="6" fill="#FFFFFF" /> <rect x="117" y="44" width="16" height="6" fill="#FFFFFF" />
+     </svg>
+     <svg id="scarf-green" class="snowman-item" width="160" height="80" viewbox="0 0 160 80" style="top: 225px; left: 120px; display: none;"><ellipse cx="80" cy="25" rx="60" ry="16" fill="#228B22" /> <rect x="25" y="20" width="20" height="45" fill="#228B22" /> <rect x="27" y="60" width="5" height="10" fill="#228B22" /> <rect x="35" y="60" width="5" height="10" fill="#228B22" />
+     </svg>
+     <svg id="scarf-purple" class="snowman-item" width="160" height="80" viewbox="0 0 160 80" style="top: 225px; left: 120px; display: none;"><ellipse cx="80" cy="25" rx="60" ry="16" fill="#9370DB" /> <rect x="115" y="20" width="20" height="50" fill="#9370DB" /> <rect x="117" y="65" width="5" height="10" fill="#9370DB" /> <rect x="125" y="65" width="5" height="10" fill="#9370DB" /> <circle cx="70" cy="22" r="3" fill="#FFD700" /> <circle cx="85" cy="25" r="3" fill="#FFD700" />
+     </svg>
+     <svg id="scarf-orange" class="snowman-item" width="160" height="80" viewbox="0 0 160 80" style="top: 225px; left: 120px; display: none;"><ellipse cx="80" cy="25" rx="60" ry="16" fill="#FF8C00" /> <rect x="25" y="20" width="20" height="45" fill="#FF8C00" /> <rect x="27" y="60" width="5" height="10" fill="#FF8C00" /> <rect x="35" y="60" width="5" height="10" fill="#FF8C00" />
+     </svg>
+     <svg id="scarf-plaid" class="snowman-item" width="160" height="80" viewbox="0 0 160 80" style="top: 225px; left: 120px; display: none;"><ellipse cx="80" cy="25" rx="60" ry="16" fill="#8B0000" /> <line x1="50" y1="18" x2="110" y2="18" stroke="#FFFFFF" stroke-width="2" /> <line x1="50" y1="25" x2="110" y2="25" stroke="#FFFFFF" stroke-width="2" /> <line x1="50" y1="32" x2="110" y2="32" stroke="#FFFFFF" stroke-width="2" /> <rect x="115" y="20" width="20" height="50" fill="#8B0000" /> <line x1="120" y1="25" x2="130" y2="25" stroke="#FFFFFF" stroke-width="2" /> <line x1="120" y1="40" x2="130" y2="40" stroke="#FFFFFF" stroke-width="2" /> <line x1="120" y1="55" x2="130" y2="55" stroke="#FFFFFF" stroke-width="2" />
+     </svg>
+     <svg id="scarf-rainbow" class="snowman-item" width="160" height="80" viewbox="0 0 160 80" style="top: 225px; left: 120px; display: none;"><ellipse cx="80" cy="25" rx="60" ry="16" fill="#FF0000" /> <ellipse cx="80" cy="25" rx="50" ry="13" fill="#FF7F00" /> <ellipse cx="80" cy="25" rx="40" ry="10" fill="#FFFF00" /> <ellipse cx="80" cy="25" rx="30" ry="7" fill="#00FF00" /> <ellipse cx="80" cy="25" rx="20" ry="5" fill="#0000FF" /> <rect x="25" y="20" width="20" height="45" fill="#FF0000" /> <rect x="27" y="25" width="16" height="8" fill="#FF7F00" /> <rect x="29" y="35" width="12" height="8" fill="#FFFF00" /> <rect x="31" y="45" width="8" height="8" fill="#00FF00" />
+     </svg><!-- Buttons -->
+     <svg id="buttons-coal" class="snowman-item" width="40" height="100" viewbox="0 0 40 100" style="top: 255px; left: 180px; display: none;"><circle cx="20" cy="20" r="8" fill="#000000" /> <circle cx="20" cy="50" r="8" fill="#000000" /> <circle cx="20" cy="80" r="8" fill="#000000" />
+     </svg>
+     <svg id="buttons-colorful" class="snowman-item" width="40" height="100" viewbox="0 0 40 100" style="top: 255px; left: 180px; display: none;"><circle cx="20" cy="20" r="8" fill="#FF0000" /> <circle cx="20" cy="50" r="8" fill="#00FF00" /> <circle cx="20" cy="80" r="8" fill="#0000FF" />
+     </svg>
+     <svg id="buttons-stars" class="snowman-item" width="40" height="100" viewbox="0 0 40 100" style="top: 255px; left: 180px; display: none;"><path d="M 20 13 L 22 21 L 30 21 L 24 26 L 26 34 L 20 29 L 14 34 L 16 26 L 10 21 L 18 21 Z" fill="#FFD700" /> <path d="M 20 43 L 22 51 L 30 51 L 24 56 L 26 64 L 20 59 L 14 64 L 16 56 L 10 51 L 18 51 Z" fill="#FFD700" /> <path d="M 20 73 L 22 81 L 30 81 L 24 86 L 26 94 L 20 89 L 14 94 L 16 86 L 10 81 L 18 81 Z" fill="#FFD700" />
+     </svg><!-- Arms/Gloves -->
+     <svg id="arms-sticks" class="snowman-item" width="400" height="130" viewbox="0 0 400 130" style="top: 250px; left: 0px; display: none;"><line x1="135" y1="65" x2="20" y2="35" stroke="#8B4513" stroke-width="5" stroke-linecap="round" /> <line x1="265" y1="65" x2="380" y2="35" stroke="#8B4513" stroke-width="5" stroke-linecap="round" />
+     </svg>
+     <svg id="arms-mittens" class="snowman-item" width="400" height="130" viewbox="0 0 400 130" style="top: 250px; left: 0px; display: none;"><line x1="135" y1="65" x2="35" y2="40" stroke="#8B4513" stroke-width="5" stroke-linecap="round" /> <ellipse cx="28" cy="37" rx="16" ry="20" fill="#FF6B6B" /> <line x1="265" y1="65" x2="365" y2="40" stroke="#8B4513" stroke-width="5" stroke-linecap="round" /> <ellipse cx="372" cy="37" rx="16" ry="20" fill="#FF6B6B" />
+     </svg>
+     <svg id="arms-gloves" class="snowman-item" width="400" height="130" viewbox="0 0 400 130" style="top: 250px; left: 0px; display: none;"><line x1="135" y1="65" x2="35" y2="40" stroke="#8B4513" stroke-width="5" stroke-linecap="round" /> <rect x="18" y="28" width="18" height="24" rx="4" fill="#4169E1" /> <line x1="265" y1="65" x2="365" y2="40" stroke="#8B4513" stroke-width="5" stroke-linecap="round" /> <rect x="364" y="28" width="18" height="24" rx="4" fill="#4169E1" />
+     </svg>
+     <svg id="arms-candy-cane" class="snowman-item" width="400" height="130" viewbox="0 0 400 130" style="top: 250px; left: 0px; display: none;"><path d="M 135 65 Q 80 50 35 45 Q 25 45 25 35 Q 25 25 35 25" stroke="#DC143C" stroke-width="8" fill="none" stroke-linecap="round" /> <path d="M 135 65 Q 80 50 35 45 Q 25 45 25 35 Q 25 25 35 25" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="8,8" /> <path d="M 265 65 Q 320 50 365 45 Q 375 45 375 35 Q 375 25 365 25" stroke="#DC143C" stroke-width="8" fill="none" stroke-linecap="round" /> <path d="M 265 65 Q 320 50 365 45 Q 375 45 375 35 Q 375 25 365 25" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="8,8" />
+     </svg>
+     <svg id="arms-branches" class="snowman-item" width="400" height="130" viewbox="0 0 400 130" style="top: 250px; left: 0px; display: none;"><line x1="135" y1="65" x2="30" y2="40" stroke="#654321" stroke-width="6" stroke-linecap="round" /> <line x1="50" y1="48" x2="35" y2="35" stroke="#654321" stroke-width="4" stroke-linecap="round" /> <line x1="70" y1="53" x2="60" y2="45" stroke="#654321" stroke-width="4" stroke-linecap="round" /> <line x1="90" y1="58" x2="85" y2="50" stroke="#654321" stroke-width="3" stroke-linecap="round" /> <line x1="265" y1="65" x2="370" y2="40" stroke="#654321" stroke-width="6" stroke-linecap="round" /> <line x1="350" y1="48" x2="365" y2="35" stroke="#654321" stroke-width="4" stroke-linecap="round" /> <line x1="330" y1="53" x2="340" y2="45" stroke="#654321" stroke-width="4" stroke-linecap="round" /> <line x1="310" y1="58" x2="315" y2="50" stroke="#654321" stroke-width="3" stroke-linecap="round" />
+     </svg>
+     <svg id="arms-striped-mittens" class="snowman-item" width="400" height="130" viewbox="0 0 400 130" style="top: 250px; left: 0px; display: none;"><line x1="135" y1="65" x2="35" y2="40" stroke="#8B4513" stroke-width="5" stroke-linecap="round" /> <ellipse cx="28" cy="37" rx="16" ry="20" fill="#4169E1" /> <rect x="20" y="32" width="16" height="4" fill="#FFFFFF" /> <rect x="20" y="40" width="16" height="4" fill="#FFFFFF" /> <line x1="265" y1="65" x2="365" y2="40" stroke="#8B4513" stroke-width="5" stroke-linecap="round" /> <ellipse cx="372" cy="37" rx="16" ry="20" fill="#4169E1" /> <rect x="364" y="32" width="16" height="4" fill="#FFFFFF" /> <rect x="364" y="40" width="16" height="4" fill="#FFFFFF" />
+     </svg>
+     <svg id="arms-waving" class="snowman-item" width="400" height="130" viewbox="0 0 400 130" style="top: 250px; left: 0px; display: none;"><line x1="135" y1="65" x2="60" y2="25" stroke="#8B4513" stroke-width="5" stroke-linecap="round" /> <line x1="265" y1="65" x2="340" y2="25" stroke="#8B4513" stroke-width="5" stroke-linecap="round" />
+     </svg>
+     <svg id="arms-pointing" class="snowman-item" width="400" height="130" viewbox="0 0 400 130" style="top: 250px; left: 0px; display: none;"><line x1="135" y1="65" x2="20" y2="65" stroke="#8B4513" stroke-width="5" stroke-linecap="round" /> <line x1="265" y1="65" x2="380" y2="65" stroke="#8B4513" stroke-width="5" stroke-linecap="round" />
+     </svg>
+    </div>
+   </div><!-- Sidebar with options -->
+   <div class="sidebar">
+    <div class="category">
+     <div class="category-title">
+      🎭 Expression
+     </div>
+     <div class="options-grid"><button class="option-btn selected" data-category="face" data-item="happy">😊</button> <button class="option-btn" data-category="face" data-item="excited">😃</button> <button class="option-btn" data-category="face" data-item="surprised">😮</button> <button class="option-btn" data-category="face" data-item="silly">😜</button> <button class="option-btn" data-category="face" data-item="calm">😌</button> <button class="option-btn" data-category="face" data-item="sad">😢</button>
+     </div>
+    </div>
+    <div class="category">
+     <div class="category-title">
+      🎩 Hats
+     </div>
+     <div class="options-grid"><button class="option-btn" data-category="hat" data-item="none">🚫</button> <button class="option-btn" data-category="hat" data-item="top">🎩</button> <button class="option-btn" data-category="hat" data-item="beanie">🧢</button> <button class="option-btn" data-category="hat" data-item="santa">🎅</button> <button class="option-btn" data-category="hat" data-item="wizard">🧙</button> <button class="option-btn" data-category="hat" data-item="cowboy">🤠</button> <button class="option-btn" data-category="hat" data-item="crown">👑</button> <button class="option-btn" data-category="hat" data-item="party">🎉</button> <button class="option-btn" data-category="hat" data-item="chef">👨‍🍳</button>
+     </div>
+    </div>
+    <div class="category">
+     <div class="category-title">
+      🧣 Scarves
+     </div>
+     <div class="options-grid"><button class="option-btn" data-category="scarf" data-item="none">🚫</button> <button class="option-btn" data-category="scarf" data-item="red">🔴</button> <button class="option-btn" data-category="scarf" data-item="striped">🔵</button> <button class="option-btn" data-category="scarf" data-item="green">🟢</button> <button class="option-btn" data-category="scarf" data-item="purple">🟣</button> <button class="option-btn" data-category="scarf" data-item="orange">🟠</button> <button class="option-btn" data-category="scarf" data-item="plaid">🟥</button> <button class="option-btn" data-category="scarf" data-item="rainbow">🌈</button>
+     </div>
+    </div>
+    <div class="category">
+     <div class="category-title">
+      🔘 Buttons
+     </div>
+     <div class="options-grid"><button class="option-btn" data-category="buttons" data-item="none">🚫</button> <button class="option-btn" data-category="buttons" data-item="coal">⚫</button> <button class="option-btn" data-category="buttons" data-item="colorful">🔴🟢🔵</button> <button class="option-btn" data-category="buttons" data-item="stars">⭐</button>
+     </div>
+    </div>
+    <div class="category">
+     <div class="category-title">
+      🧤 Arms
+     </div>
+     <div class="options-grid"><button class="option-btn" data-category="arms" data-item="none">🚫</button> <button class="option-btn" data-category="arms" data-item="sticks">🌿</button> <button class="option-btn" data-category="arms" data-item="mittens">🧤</button> <button class="option-btn" data-category="arms" data-item="gloves">🖐️</button> <button class="option-btn" data-category="arms" data-item="candy-cane">🍬</button> <button class="option-btn" data-category="arms" data-item="branches">🌲</button> <button class="option-btn" data-category="arms" data-item="striped-mittens">🧤✨</button> <button class="option-btn" data-category="arms" data-item="waving">👋</button> <button class="option-btn" data-category="arms" data-item="pointing">👉</button>
+     </div>
+    </div>
+    <div class="category">
+     <div class="category-title">
+      🌍 Background
+     </div>
+     <div class="background-options"><button class="bg-option selected" data-bg="frozen-lake">❄️ Frozen Lake</button> <button class="bg-option" data-bg="log-cabin">🏠 Log Cabin</button> <button class="bg-option" data-bg="pine-forest">🌲 Pine Forest</button> <button class="bg-option" data-bg="sunny-beach">🏖️ Sunny Beach</button> <button class="bg-option" data-bg="starry-night">🌟 Starry Night</button> <button class="bg-option" data-bg="school">🏫 School</button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script src="snowman.js"></script>
+ </body>
+</html>
